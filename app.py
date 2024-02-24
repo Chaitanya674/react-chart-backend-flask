@@ -1,4 +1,4 @@
-from flask import Flask ,jsonify
+from flask import Flask , jsonify
 from pymongo import MongoClient
 from flask_cors import CORS
 import json
@@ -18,7 +18,7 @@ db = client["Database"]
 collection = db["Data"]
 
 
-@app.route("/", methods=['GET'])
+@app.route("/")
 def get_data():
     try:
         data_from_mongo = list(collection.find({}))
