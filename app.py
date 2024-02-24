@@ -18,7 +18,7 @@ db = client["Database"]
 collection = db["Data"]
 
 
-@app.route("/")
+@app.route("/", methods=['GET'])
 def get_data():
     try:
         data_from_mongo = list(collection.find({}))
